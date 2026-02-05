@@ -86,15 +86,3 @@ def process_placement_data(url):
     Tune, Test = train_test_split(Test, train_size=0.5, stratify=Test.target, random_state=42)
     
     return Train, Tune, Test, prevalence
-
-# %%
-# Call the College Completion function
-cc_train, cc_tune, cc_test, cc_prev = process_cc_data('cc_institution_details.csv')
-
-# Call the Placement function
-place_train, place_tune, place_test, place_prev = process_placement_data('Placement_Data_Full_Class.csv')
-
-# Print one result to prove it worked
-print(f"College Train set size: {len(cc_train)}")
-print(f"Placement Train set size: {len(place_train)}")
-# %%
